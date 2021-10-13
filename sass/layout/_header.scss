@@ -1,0 +1,39 @@
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  /* bpos top sticks img to top when you change the size of the vp */
+  /* clip-path: polygon(x y, x y, x y); corners */
+  /* clip-path: polygon(50% 0, 100% 100%, 0 100%); */
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* start at top left cw */
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+/* .logo-box:hover {
+  animation: moveInRight 1s ease-out;
+} */

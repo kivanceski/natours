@@ -1,0 +1,87 @@
+.container {
+  max-width: $grid-width;
+  margin: 0 auto;
+  margin-top: 3rem;
+  background-color: #eee;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: $gutter-vertical;
+  column-gap: $gutter-horizontal;
+
+  // font-size: 2rem;
+  // text-align: center;
+  // color: #333;
+  // width: calc( (100% - #{$gutter-vertical} )/2) in float you can use different units
+}
+
+// [class^="col-"] {} elements with classnames that start with col-  2- * containes 3- $ ends with
+
+.item {
+  // padding: 1rem 3rem;
+  background-color: orangered;
+
+  &-1 {
+    grid-column: span 6;
+  }
+
+  &-2 {
+    grid-column: span 6;
+  }
+
+  &-3 {
+    grid-column: span 4;
+  }
+
+  &-4 {
+    grid-column: span 4;
+  }
+
+  &-5 {
+    grid-column: span 4;
+  }
+
+  &-6 {
+    grid-column: span 4;
+  }
+
+  &-7 {
+    grid-column: span 8;
+  }
+
+  &-8 {
+    grid-column: span 3;
+  }
+
+  &-9 {
+    grid-column: span 3;
+  }
+
+  &-10 {
+    grid-column: span 3;
+  }
+
+  &-11 {
+    grid-column: span 3;
+  }
+
+  &-12 {
+    grid-column: span 3;
+  }
+
+  &-13 {
+    grid-column: span 3;
+  }
+
+  &-14 {
+    grid-column: span 6;
+  }
+
+  &-15 {
+    grid-column: span 3;
+  }
+
+  &-16 {
+    grid-column: span 9;
+  }
+}

@@ -1,0 +1,45 @@
+@keyframes moveInLeft {
+  /* beginning of the animation */
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+    /* just like translate you can rotate(180deg) */
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+
+  /* ending of the animation */
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+  /* for the browser performance its better to animate 2 properties opacity and transform */
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
