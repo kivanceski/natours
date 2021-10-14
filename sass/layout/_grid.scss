@@ -1,4 +1,31 @@
-.container {
+// [class^="col-"] {} elements with classnames that start with col-  2- * containes 3- $ ends with
+
+.grid-about {
+  max-width: $grid-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  row-gap: $gutter-vertical;
+  column-gap: $gutter-horizontal;
+}
+
+.grid-features {
+  display: flex;
+  max-width: $grid-width;
+  margin: 0 auto;
+  gap: $gutter-horizontal;
+  justify-content: center;
+}
+
+.grid-tours {
+  margin: 0 auto;
+  max-width: $grid-width;
+  display: flex;
+  gap: $gutter-horizontal;
+}
+
+.grid .container {
   max-width: $grid-width;
   margin: 0 auto;
   margin-top: 3rem;
@@ -14,8 +41,6 @@
   // color: #333;
   // width: calc( (100% - #{$gutter-vertical} )/2) in float you can use different units
 }
-
-// [class^="col-"] {} elements with classnames that start with col-  2- * containes 3- $ ends with
 
 .item {
   // padding: 1rem 3rem;
