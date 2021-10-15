@@ -25,88 +25,137 @@
   gap: $gutter-horizontal;
 }
 
-.grid .container {
+.row {
   max-width: $grid-width;
   margin: 0 auto;
-  margin-top: 3rem;
-  background-color: #eee;
 
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  row-gap: $gutter-vertical;
-  column-gap: $gutter-horizontal;
-
-  // font-size: 2rem;
-  // text-align: center;
-  // color: #333;
-  // width: calc( (100% - #{$gutter-vertical} )/2) in float you can use different units
-}
-
-.item {
-  // padding: 1rem 3rem;
-  background-color: orangered;
-
-  &-1 {
-    grid-column: span 6;
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
   }
 
-  &-2 {
-    grid-column: span 6;
+  @include clearfix;
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
   }
 
-  &-3 {
-    grid-column: span 4;
+  .col-1-of-2 {
+    width: calc((100% - #{$gutter-horizontal}) / 2);
   }
 
-  &-4 {
-    grid-column: span 4;
+  .col-1-of-3 {
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
   }
 
-  &-5 {
-    grid-column: span 4;
+  .col-2-of-3 {
+    width: calc(
+      2 * ((100% - 2 * #{$gutter-horizontal}) / 3) + #{$gutter-horizontal}
+    );
   }
 
-  &-6 {
-    grid-column: span 4;
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
   }
 
-  &-7 {
-    grid-column: span 8;
+  .col-2-of-4 {
+    width: calc(
+      2 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
+    );
   }
 
-  &-8 {
-    grid-column: span 3;
-  }
-
-  &-9 {
-    grid-column: span 3;
-  }
-
-  &-10 {
-    grid-column: span 3;
-  }
-
-  &-11 {
-    grid-column: span 3;
-  }
-
-  &-12 {
-    grid-column: span 3;
-  }
-
-  &-13 {
-    grid-column: span 3;
-  }
-
-  &-14 {
-    grid-column: span 6;
-  }
-
-  &-15 {
-    grid-column: span 3;
-  }
-
-  &-16 {
-    grid-column: span 9;
+  .col-3-of-4 {
+    width: calc(
+      3 * ((100% - 3 * #{$gutter-horizontal}) / 4) + 2 * #{$gutter-horizontal}
+    );
   }
 }
+
+// .grid .container {
+//   max-width: $grid-width;
+//   margin: 0 auto;
+//   margin-top: 3rem;
+//   background-color: #eee;
+
+//   display: grid;
+//   grid-template-columns: repeat(12, 1fr);
+//   row-gap: $gutter-vertical;
+//   column-gap: $gutter-horizontal;
+
+//   // font-size: 2rem;
+//   // text-align: center;
+//   // color: #333;
+//   // width: calc( (100% - #{$gutter-vertical} )/2) in float you can use different units
+// }
+
+// .item {
+//   // padding: 1rem 3rem;
+//   background-color: orangered;
+
+//   &-1 {
+//     grid-column: span 6;
+//   }
+
+//   &-2 {
+//     grid-column: span 6;
+//   }
+
+//   &-3 {
+//     grid-column: span 4;
+//   }
+
+//   &-4 {
+//     grid-column: span 4;
+//   }
+
+//   &-5 {
+//     grid-column: span 4;
+//   }
+
+//   &-6 {
+//     grid-column: span 4;
+//   }
+
+//   &-7 {
+//     grid-column: span 8;
+//   }
+
+//   &-8 {
+//     grid-column: span 3;
+//   }
+
+//   &-9 {
+//     grid-column: span 3;
+//   }
+
+//   &-10 {
+//     grid-column: span 3;
+//   }
+
+//   &-11 {
+//     grid-column: span 3;
+//   }
+
+//   &-12 {
+//     grid-column: span 3;
+//   }
+
+//   &-13 {
+//     grid-column: span 3;
+//   }
+
+//   &-14 {
+//     grid-column: span 6;
+//   }
+
+//   &-15 {
+//     grid-column: span 3;
+//   }
+
+//   &-16 {
+//     grid-column: span 9;
+//   }
+// }
