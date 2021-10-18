@@ -5,7 +5,7 @@
   // higher values are more subtle
   perspective: 150rem;
   -moz-perspective: 150rem;
-  flex: 1;
+  flex: 1 0 auto;
   position: relative;
   height: 52rem; // just like in floats its height collapsed so here we specify the same height as below
 

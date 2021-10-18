@@ -6,6 +6,12 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+    max-width: 50rem;
+    row-gap: $gutter-vertical-small;
+  }
+
   row-gap: $gutter-vertical;
   column-gap: $gutter-horizontal;
 }
@@ -16,6 +22,12 @@
   margin: 0 auto;
   gap: $gutter-horizontal;
   justify-content: center;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    gap: $gutter-vertical-small;
+    max-width: 50rem;
+  }
 }
 
 .grid-tours {
@@ -23,6 +35,12 @@
   max-width: $grid-width;
   display: flex;
   gap: $gutter-horizontal;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    gap: $gutter-vertical-small;
+    max-width: 50rem;
+  }
 }
 
 .row {
@@ -31,6 +49,15 @@
 
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
+
+    @include respond(tab-port) {
+      margin-bottom: $gutter-vertical-small;
+    }
+  }
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    padding: 0 3rem;
   }
 
   @include clearfix;
@@ -40,6 +67,15 @@
 
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
+
+      @include respond(tab-port) {
+        margin-right: 0;
+        margin-bottom: $gutter-vertical-small;
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 100% !important;
     }
   }
 
