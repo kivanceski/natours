@@ -16,7 +16,6 @@ window.addEventListener("keydown", function (e) {
     popup.classList.add("hidden");
     popupContent.classList.remove("scale");
   }
-  console.log(e);
 });
 
 navList.addEventListener("click", function (e) {
@@ -34,7 +33,6 @@ popup.addEventListener("click", function (e) {
   e.preventDefault();
   const element = e.target.closest(".popup__content");
   const btn = e.target.closest(".popup__close");
-  // console.log(element);
   if (!element || btn) {
     popup.classList.add("hidden");
     popupContent.classList.remove("scale");
