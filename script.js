@@ -10,6 +10,15 @@ const popup = document.querySelector(".popup");
 const popupContent = document.querySelector(".popup__content");
 const popupButtons = document.querySelectorAll(".btn-popup");
 
+window.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    navCheckbox.checked = false;
+    popup.classList.add("hidden");
+    popupContent.classList.remove("scale");
+  }
+  console.log(e);
+});
+
 navList.addEventListener("click", function (e) {
   if (e.type === "click") navCheckbox.checked = false;
 });
@@ -17,7 +26,6 @@ navList.addEventListener("click", function (e) {
 popupButtons.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     popup.classList.remove("hidden");
-    // popupContent.classList.remove("hidden");
     popupContent.classList.add("scale");
   });
 });
