@@ -9,7 +9,6 @@ const navCheckbox = document.querySelector(".navigation__checkbox");
 const popup = document.querySelector(".popup");
 const popupContent = document.querySelector(".popup__content");
 const popupButtons = document.querySelectorAll(".btn-popup");
-const popupClose = document.querySelector(".popup__close");
 
 navList.addEventListener("click", function (e) {
   if (e.type === "click") navCheckbox.checked = false;
@@ -18,22 +17,24 @@ navList.addEventListener("click", function (e) {
 popupButtons.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     popup.classList.remove("hidden");
-    popupContent.classList.remove("hidden");
+    // popupContent.classList.remove("hidden");
     popupContent.classList.add("scale");
   });
 });
 
 popup.addEventListener("click", function (e) {
+  e.preventDefault();
   const element = e.target.closest(".popup__content");
+  const btn = e.target.closest(".popup__close");
   // console.log(element);
-  if (!element) {
+  if (!element || btn) {
     popup.classList.add("hidden");
     popupContent.classList.remove("scale");
   }
 });
 
-popupClose.addEventListener("click", function (e) {
-  e.preventDefault();
-  popup.classList.add("hidden");
-  popupContent.classList.remove("scale");
-});
+// popupClose.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   popup.classList.add("hidden");
+//   popupContent.classList.remove("scale");
+// });
