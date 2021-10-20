@@ -83,9 +83,19 @@ body {
   text-transform: uppercase;
 }
 
+.heading-tertiary-about {
+  @include respond(phone) {
+    padding: 0 1rem;
+  }
+}
+
 .paragraph {
   font-size: $default-font-size;
   &:not(:last-child) {
     margin-bottom: 3rem;
+  }
+
+  @include respond(phone) {
+    padding: 0 1rem;
   }
 }

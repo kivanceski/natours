@@ -28,6 +28,10 @@
     gap: $gutter-vertical-small;
     max-width: 50rem;
   }
+
+  @include respond(phone) {
+    max-width: 33rem;
+  }
 }
 
 .grid-tours {
