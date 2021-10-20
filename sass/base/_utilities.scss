@@ -37,3 +37,12 @@
 .u_margin-sides-small {
   margin: 0 2rem;
 }
+
+.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.scale {
+  transform: translate(-50%, -50%) scale(1) !important;
+}
